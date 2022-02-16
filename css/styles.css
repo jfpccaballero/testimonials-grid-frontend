@@ -1,0 +1,111 @@
+* {box-sizing: border-box;}
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 13px;
+    margin: 0;
+}
+div {
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+h1{
+    font-size: 20px;
+    font-weight: 600;
+}
+h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+h3 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+    opacity: 50%;
+}
+p {
+    font-weight: 500;
+    opacity: 70%;
+    line-height: 1.5;
+    margin: 26px 0 0;
+}
+.attribution { font-size: 11px; text-align: center; padding: 0; padding-top: 0.5rem;}
+.attribution a { color: hsl(228, 45%, 44%); }
+.first {
+    background-color: hsl(263, 55%, 52%);
+    color: hsl(263, 100%, 81%);
+    grid-area: first;
+    position: relative;
+}
+.first h1 {
+    color: hsl(0, 0%, 100%);
+    position: relative;
+}
+.first h2 {color: hsl(0, 0%, 100%);}
+.first .picture {border: 3px solid hsl(263, 84%, 75%);}
+.fifth {
+    background-color: hsl(0, 0%, 100%);
+    grid-area: fifth;
+}
+.fourth {
+    background-color: hsl(219, 29%, 14%); 
+    grid-area: fourth;
+}
+.fourth .picture {border: 3px solid hsl(263, 55%, 52%);}
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    'first first first first first first second second fifth fifth'
+    'third third fourth fourth fourth fourth fourth fourth fifth fifth';
+    row-gap: 2rem;
+    column-gap: 2rem;
+    padding: 0 10%;
+    padding-top: 3rem;
+    margin: auto;
+}
+.impar {color: hsl(217, 19%, 35%);}
+.par {color: hsl(0, 0%, 100%);}
+.picture {
+    float: left;
+    border-radius: 100%;
+    margin-right: 1rem;
+    width: 40px;
+}
+.quotation {
+    position: absolute; 
+    top: 0 ;
+    right: 10%;
+}
+.second {
+    background-color: hsl(217, 19%, 35%);
+    grid-area: second;
+}
+.third {
+    background-color: hsl(0, 0%, 100%);
+    grid-area: third;
+}
+
+@media screen and (max-width: 1375px) {
+    .grid-container {
+        grid-template-areas: 
+        'first first first first second second'
+        'third third fourth fourth fourth fourth'
+        'fifth fifth fifth fifth fifth fifth';
+    }
+}
+@media screen and (max-width: 820px) {
+    .grid-container {
+        grid-template-areas: 
+        'first first first second second'
+        'third third fourth fourth fourth'
+        'fifth fifth fifth fifth fifth';
+    }
+}
+@media screen and (max-width: 774px) {
+    .grid-container {display: block;}
+    div {margin: 2rem;}
+}
+@media screen and (max-width: 400px) {
+    .grid-container {padding: 0;}
+}
